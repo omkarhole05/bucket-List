@@ -1,0 +1,100 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to top, #e3f2fd, #f9f9f9);
+            color: #333;
+            padding: 20px;
+        }
+
+        header {            
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #1976d2;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .bucket-item {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .bucket-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .bucket-item .content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bucket-item.completed {
+            background: #e7e7e7;
+        
+        }
+        .bucket-item.completed p{
+            text-decoration: line-through;
+        }
+
+        .bucket-item h3 {
+            font-size: 1.5rem;
+            color: #1976d2;
+        }
+
+        .bucket-item p {
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .bucket-item .icon {
+            font-size: 2rem;
+            color: #1976d2;
+        }
+
+        footer {
+            text-align: center;
+            margin-bottom: 13px;
+            font-size: 0.9rem;
+            color: #555;
+            padding: 10px 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .bucket-item h3 {
+                font-size: 1.2rem;
+            }
+
+            .bucket-item p {
+                font-size: 0.9rem;
+            }
+        }
